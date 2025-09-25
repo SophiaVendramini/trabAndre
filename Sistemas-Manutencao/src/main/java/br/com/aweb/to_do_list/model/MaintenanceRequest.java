@@ -30,12 +30,12 @@ public class MaintenanceRequest {
     private Long id;
 
     @NotBlank(message = "O nome do solicitante é obrigatório.")
-    @Size(min = 3, max = 100, message = "O nome do solicitante deve ter entre 3 e 100 caracteres.")
+    @Size(min = 1, max = 100, message = "O nome do solicitante deve ter entre 3 e 100 caracteres.")
     @Column(length = 100, nullable = false)
     private String requesterName;
 
     @NotBlank(message = "A descrição do problema é obrigatória.")
-    @Size(min = 10, max = 500, message = "A descrição do problema deve ter entre 10 e 500 caracteres.")
+    @Size(min = 1, max = 500, message = "A descrição do problema deve ter entre 10 e 500 caracteres.")
     @Column(length = 500, nullable = false)
     private String problemDescription;
 
